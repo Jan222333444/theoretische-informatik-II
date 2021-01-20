@@ -1,8 +1,8 @@
 # Theoretische Informatik II
 
 ## Sortieren mit Merge Sort
->Beim Merge Sort werden zwei Teilarray durch sortiertes mischen zusammengeführt. Der Algorithmus teilt dabei den Array solange auf bis nur noch pro Teilarray maximal 1 Element übrig ist. Diese Teilarrays werden zusammengeführt indem immer die ersten beiden Elemente zweier Teilarrays verglichen werden. Ist ein Wert kleiner  so wird er in den Ausgabearray geschrieben und man betrachtet im nächsten Vergleich das darauf folgende Element. Dies wird so lange durchgeführt bis man das Ende beider Teilarrays erreicht ist. Die gegebenen Teilarrays müssen bereits geordnet sein, weshalb die zuvor angesprochene Teilung bis zu Arrays mit maximal einem Element notwendig ist, da Listen mit einem Element automatisch sortiert sind.
-Der Merge Sort Algorithmus basiert auf dem *Teile-und-Herrsche-Paradigma*(vgl. Sedgewick et al, 2014).
+>Beim Merge Sort werden zwei Teilarrays durch sortiertes Mischen zusammengeführt. Der Algorithmus teilt dabei den Array solange auf bis nur noch pro Teilarray maximal 1 Element übrig ist. Diese Teilarrays werden zusammengeführt indem immer die ersten beiden Elemente zweier Teilarrays verglichen werden. Ist ein Wert kleiner  so wird er in den Ausgabearray geschrieben und man betrachtet im nächsten Vergleich das darauf folgende Element. Dies wird so lange durchgeführt bis man das Ende beider Teilarrays erreicht ist. Die gegebenen Teilarrays müssen bereits geordnet sein, weshalb die zuvor angesprochene Teilung bis zu Arrays mit maximal einem Element notwendig ist, da Listen mit einem Element automatisch sortiert sind.
+Der Merge Sort Algorithmus basiert auf dem *Teile-und-Herrsche-Paradigma* (vgl. Sedgewick et al, 2014).
 
 >Charakteristika(N = Größe des Arrays):
 
@@ -89,12 +89,11 @@ Dabei wird der Array im zu sortierenden Array selbst sortiert und somit einiges 
 > Die Sortierung wird über eine Funktionen realisiert die jeweils den niedrigsten, den höchsten und den mittleren Index des zu sortierenden Teils des Arrays und den gesamten Array selbst übergeben bekommen. Dieser Abschnitt wird dann iterativ per merge sortiert
 
 Sortieren Abstraktes In-Place-Mergen
-8 1 2 6 3 5 9 7 4
-|8|1|2|6|3|5|9|7|4|
-|---|---|----|---|---|---|---|---|---|
-|
-|
 
+| 8 | 1 | 2 | 6 | 3 | 5 | 9 | 7 | 4 |
+|---|---|---|---|---|---|---|---|---|
+|   |   |   |   |   |   |   |   |   |
+|   |   |   |   |   |   |   |   |   |
 
 Abstrakter In-Place-Merge in Java
 ```Java
@@ -104,7 +103,12 @@ public void merge(Comparable[] input, int low, int mid, int high){
 ```
 ---
 ### Top-Down-Mergesort
->Der Top-Down
+
+Beim Top-Down -Mergesort wird ein weiterer Sortieralgorithmus (z.B. Insertionsort oder Selectionsort) zur Hilfe genommen. Die weiteren Sortieralgorithmen werden für das sortieren kleinerer Teilarrays genutzt da z.B. der Insertionsort bei kleinen Arrays effizienter ist als der Mergesort.
+Das bedeutet, dass die Aufteilung des Arrays, wie sie beim Mergesort vorgesehen ist  nur bis zu einem gewissen Grad durchgeführt wird und dann die restliche Sortierung der Arrayfragmente durch einen für kleine Arrays effizienteren Algorithmus durchgeführt.
+>Der Top-Down-Mergesort Algorithmus hat ein Laufzeit verhalten zwischen 1/2 N log(N) und N log(N). 
+
+
 ---
 ### Bottom-Up-Mergesort
 >Der Bottom-Up
