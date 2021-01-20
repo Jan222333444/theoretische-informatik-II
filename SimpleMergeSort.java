@@ -18,10 +18,29 @@ public class SimpleMergeSort{
 		}
 		int left = 0;
 		int right = 0;
+		int out = 0;
 		Comparable[] output = new Comparable[input.length];
 		while(left < part1.length || right < part2.length){
-			if(part1[left].compareTo(part2[right]) == 0){}
+			int result = part1[left].compareTo(part2[right]);
+			if( result == 0){
+				if( part1[left] == null && part2[right] == null){
+					break;
+				}
+				 output[out] = part1[left];
+				 out++;
+				 output[out] = part2[right];
+				 out++;
+				 left++;
+				 right++;
+			}
+			else if(result < 0){
+				output[out] = part2[right];
+
+				out++;
+			}else{
+				out++;
+			}
 		}
-	
+		return output;
 	}
 }
