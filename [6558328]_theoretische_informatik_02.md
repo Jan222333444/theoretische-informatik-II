@@ -104,8 +104,8 @@ public void merge(Comparable[] input, int low, int mid, int high){
 ---
 ### Top-Down-Mergesort
 
-Beim Top-Down-Mergesort wird ein weiterer Sortieralgorithmus (z.B. Insertionsort oder Selectionsort) zur Hilfe genommen. Die weiteren Sortieralgorithmen werden für das sortieren kleinerer Teilarrays genutzt da z.B. der Insertionsort bei kleinen Arrays effizienter ist als der Mergesort.
-Das bedeutet, dass die Aufteilung des Arrays, wie sie beim Mergesort vorgesehen ist  nur bis zu einem gewissen Grad durchgeführt wird und dann die restliche Sortierung der Arrayfragmente durch einen für kleine Arrays effizienteren Algorithmus durchgeführt wird.
+Beim Top-Down-Mergesort wird ein weiterer Sortieralgorithmus (z.B. Insertionsort oder Selectionsort) zur Hilfe genommen. Die weiteren Sortieralgorithmen werden für das Sortieren kleinerer Teilarrays genutzt, da z.B. der Insertionsort bei kleinen Arrays effizienter ist als der Mergesort.
+Das bedeutet, dass die Aufteilung des Arrays, wie sie beim Mergesort vorgesehen ist, nur bis zu einem gewissen Grad durchgeführt wird und dann die restliche Sortierung der Arrayfragmente durch einen für kleine Arrays effizienteren Algorithmus durchgeführt wird.
 >Der Top-Down-Mergesort Algorithmus hat ein Laufzeit verhalten zwischen 1/2 N log(N) und N log(N). 
 
 
@@ -118,7 +118,7 @@ Das bedeutet, dass die Aufteilung des Arrays, wie sie beim Mergesort vorgesehen 
 
 ---
 ### Binärer Suchbaum
-> Beim binären Suchbaum hat jeder Knoten maximal 2 Kindknoten, wobei das linke immer den kleineren Wert hat und der rechte immer den größeren Wert. Alle Knoten links eines Knotens sind kleiner als der Ausgangsknoten und alle Knoten rechts sind größer. Dadurch ist die maximale Zahl der Vergleiche bei der Suche in einem binären Suchbaum gleich dessen Tiefe.
+> Beim binären Suchbaum hat jeder Knoten maximal 2 Kindknoten, wobei das linke immer den kleineren Wert hat und der rechte immer den größeren Wert. Alle Knoten links eines Knotens sind kleiner als der Ausgangsknoten und alle Knoten rechts sind größer. Dadurch ist die maximale Zahl der Vergleiche bei der Suche in einem binären Suchbaum gleich dessen Höhe ist. Auf jeden Knoten referenziert genau ein Elternknoten, außer beim Wurzelknoten auf den kein anderer Knoten 
 ---
 ---
 
