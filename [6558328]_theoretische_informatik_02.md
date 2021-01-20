@@ -104,8 +104,8 @@ public void merge(Comparable[] input, int low, int mid, int high){
 ---
 ### Top-Down-Mergesort
 
-Beim Top-Down -Mergesort wird ein weiterer Sortieralgorithmus (z.B. Insertionsort oder Selectionsort) zur Hilfe genommen. Die weiteren Sortieralgorithmen werden für das sortieren kleinerer Teilarrays genutzt da z.B. der Insertionsort bei kleinen Arrays effizienter ist als der Mergesort.
-Das bedeutet, dass die Aufteilung des Arrays, wie sie beim Mergesort vorgesehen ist  nur bis zu einem gewissen Grad durchgeführt wird und dann die restliche Sortierung der Arrayfragmente durch einen für kleine Arrays effizienteren Algorithmus durchgeführt.
+Beim Top-Down-Mergesort wird ein weiterer Sortieralgorithmus (z.B. Insertionsort oder Selectionsort) zur Hilfe genommen. Die weiteren Sortieralgorithmen werden für das sortieren kleinerer Teilarrays genutzt da z.B. der Insertionsort bei kleinen Arrays effizienter ist als der Mergesort.
+Das bedeutet, dass die Aufteilung des Arrays, wie sie beim Mergesort vorgesehen ist  nur bis zu einem gewissen Grad durchgeführt wird und dann die restliche Sortierung der Arrayfragmente durch einen für kleine Arrays effizienteren Algorithmus durchgeführt wird.
 >Der Top-Down-Mergesort Algorithmus hat ein Laufzeit verhalten zwischen 1/2 N log(N) und N log(N). 
 
 
