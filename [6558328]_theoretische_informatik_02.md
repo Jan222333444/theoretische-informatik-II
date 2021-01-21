@@ -111,7 +111,7 @@ Das bedeutet, dass die Aufteilung des Arrays, wie sie beim Mergesort vorgesehen 
 
 ---
 ### Bottom-Up-Mergesort
->Der Bottom-Up-Mergesort verzichtet auf Rekursion. Der Algorithmus iteriert über den Array wobei er beim ersten Durchlauf je zwei aufeinander folgende Elemente sortiert. Die entstehenden Gruppen werden dann beim nächsten Durchlauf wieder mit je zu zweit Gruppe in eine neue Gruppe gemerget. Dieser Prozess läuft so lange bis der Array sortiert ist. 
+>Der Bottom-Up-Mergesort verzichtet auf Rekursion. Der Algorithmus iteriert über den Array wobei er beim ersten Durchlauf je zwei aufeinander folgende Elemente sortiert. Die entstehenden Gruppen werden dann beim nächsten Durchlauf wieder mit je zu zweit Gruppe in eine neue Gruppe gemerget. Dieser Prozess läuft so lange bis der Array sortiert ist. Die Anzahl der benötigten Vergleiche ist gleich wie bei der rekursiven Variante, jedoch kann es beim Bottom-Up-Mergesort, passieren, dass ein Element lange Zeit als eigene Gruppe betrachtet wird und erst bei der vorletzten Iteration mit einer sehr großen Gruppe gemergt. 
 ---
 ---
 ## Bäume
@@ -120,6 +120,10 @@ Das bedeutet, dass die Aufteilung des Arrays, wie sie beim Mergesort vorgesehen 
 ### Binärer Suchbaum
 > Beim binären Suchbaum hat jeder Knoten maximal 2 Kindknoten, wobei das linke immer den kleineren Wert hat und der rechte immer den größeren Wert. Alle Knoten links eines Knotens sind kleiner als der Ausgangsknoten und alle Knoten rechts sind größer. Dadurch ist die maximale Zahl der Vergleiche bei der Suche in einem binären Suchbaum gleich dessen Höhe ist. Auf jeden Knoten referenziert genau ein Elternknoten, außer beim Wurzelknoten auf den kein anderer Knoten referenziert.
 ---
+### AVL-Bäume
+
+
+---
 ---
 
 
@@ -127,3 +131,7 @@ Das bedeutet, dass die Aufteilung des Arrays, wie sie beim Mergesort vorgesehen 
 ---
 ---
 ## Teilstringsuche nach Boyer-Moore
+
+
+---
+---
