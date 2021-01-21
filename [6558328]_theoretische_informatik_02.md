@@ -111,7 +111,7 @@ Das bedeutet, dass die Aufteilung des Arrays, wie sie beim Mergesort vorgesehen 
 
 ---
 ### Bottom-Up-Mergesort
->Der Bottom-Up
+>Der Bottom-Up-Mergesort verzichtet auf Rekursion. Der Algorithmus iteriert über den Array wobei er beim ersten Durchlauf je zwei aufeinander folgende Elemente sortiert. Die entstehenden Gruppen werden dann beim nächsten Durchlauf wieder mit je zu zweit Gruppe in eine neue Gruppe gemerget. Dieser Prozess läuft so lange bis der Array sortiert ist. 
 ---
 ---
 ## Bäume
