@@ -123,6 +123,10 @@ Der Bottom-Up-Mergesort verzichtet auf Rekursion. Der Algorithmus iteriert über
 
 
 Beim binären Suchbaum hat jeder Knoten maximal 2 Kindknoten, wobei das linke immer den kleineren Wert hat und der rechte immer den größeren Wert. Alle Knoten links eines Knotens sind kleiner als der Ausgangsknoten und alle Knoten rechts sind größer. Dadurch ist die maximale Zahl der Vergleiche bei der Suche in einem binären Suchbaum gleich dessen Höhe ist. Auf jeden Knoten referenziert genau ein Elternknoten, außer beim Wurzelknoten auf den kein anderer Knoten referenziert.
+|   |   |   |   |   |
+|---|---|---|---|---|
+|   |   | 8 |   |   |
+|   | 3 |   |12 |   |
 
 
 ---
