@@ -1,13 +1,17 @@
 # Theoretische Informatik II
 
 ## Sortieren mit Merge Sort
->Beim Merge Sort werden zwei Teilarrays durch sortiertes Mischen zusammengeführt. Der Algorithmus teilt dabei den Array solange auf bis nur noch pro Teilarray maximal 1 Element übrig ist. Diese Teilarrays werden zusammengeführt indem immer die ersten beiden Elemente zweier Teilarrays verglichen werden. Ist ein Wert kleiner  so wird er in den Ausgabearray geschrieben und man betrachtet im nächsten Vergleich das darauf folgende Element. Dies wird so lange durchgeführt bis man das Ende beider Teilarrays erreicht ist. Die gegebenen Teilarrays müssen bereits geordnet sein, weshalb die zuvor angesprochene Teilung bis zu Arrays mit maximal einem Element notwendig ist, da Listen mit einem Element automatisch sortiert sind.
+
+
+Beim Merge Sort werden zwei Teilarrays durch sortiertes Mischen zusammengeführt. Der Algorithmus teilt dabei den Array solange auf bis nur noch pro Teilarray maximal 1 Element übrig ist. Diese Teilarrays werden zusammengeführt indem immer die ersten beiden Elemente zweier Teilarrays verglichen werden. Ist ein Wert kleiner  so wird er in den Ausgabearray geschrieben und man betrachtet im nächsten Vergleich das darauf folgende Element. Dies wird so lange durchgeführt bis man das Ende beider Teilarrays erreicht ist. Die gegebenen Teilarrays müssen bereits geordnet sein, weshalb die zuvor angesprochene Teilung bis zu Arrays mit maximal einem Element notwendig ist, da Listen mit einem Element automatisch sortiert sind.
 Der Merge Sort Algorithmus basiert auf dem *Teile-und-Herrsche-Paradigma* (vgl. Sedgewick et al, 2014).
 
->Charakteristika(N = Größe des Arrays):
+
+Charakteristika(N = Größe des Arrays):
 
 	- Laufzeitverhalten: N log(N)
 	- zusätzlich benötigter Speicherplatz: N
+
 
 Einfaches Sortieren mit Mergesort
 
@@ -15,8 +19,8 @@ Einfaches Sortieren mit Mergesort
 |----| --- | ----| ---| ---|---|
 | 8 1 2 6 || 3 5 9 7 4 |||Array wird in zwei neue Arrays gespeichert|
 | 8 1 | 2 6 | 3 5 | 9 7 4||
-|1 8 | 2 6 | 3 5 | 9 | 7 4 |Erstes Sortieren|
-|1 8 | 2 6 | 3 5 | 9 | 4 7 |Maximale Teilung
+|1 8 | 2 6 | 3 5 | 9 7 | 4 |Erstes Sortieren|
+|1 8 | 2 6 | 3 5 | 7 9 | 4 |Maximale Teilung
 |1 2 6 8 || 3 5 | 4 7 9 ||Erstes Mergen 
 |1 2 6 8 || 3 4 5 7 9 |
 ||1 2 3 4 5 6 7 8 9 |
@@ -83,44 +87,59 @@ public static Comparable[] merge(Comparable[] input){
 
 ---
 ### Abstraktes In-Place-Mergen
->Beim In-Place-Verfahren versucht man den benötigten Speicher bei den rekursiven Methodenaufrufen so gering wie möglich zu halten.
+
+
+Beim In-Place-Verfahren versucht man den benötigten Speicher bei den rekursiven Methodenaufrufen so gering wie möglich zu halten.
 Dabei wird der Array im zu sortierenden Array selbst sortiert und somit einiges an Speicher eingespart
 
-> Die Sortierung wird über eine Funktionen realisiert die jeweils den niedrigsten, den höchsten und den mittleren Index des zu sortierenden Teils des Arrays und den gesamten Array selbst übergeben bekommen. Dieser Abschnitt wird dann iterativ per merge sortiert
 
-Sortieren Abstraktes In-Place-Mergen
+Die Sortierung wird über eine Funktionen realisiert die jeweils den niedrigsten, den höchsten und den mittleren Index des zu sortierenden Teils des Arrays und den gesamten Array selbst übergeben bekommen. Dieser Abschnitt wird dann iterativ per merge sortiert
 
-| 8 | 1 | 2 | 6 | 3 | 5 | 9 | 7 | 4 |
-|---|---|---|---|---|---|---|---|---|
-|   |   |   |   |   |   |   |   |   |
-|   |   |   |   |   |   |   |   |   |
 
-Abstrakter In-Place-Merge in Java
-```Java
-public void merge(Comparable[] input, int low, int mid, int high){
-
-}
-```
 ---
 ### Top-Down-Mergesort
 
+
 Beim Top-Down-Mergesort wird ein weiterer Sortieralgorithmus (z.B. Insertionsort oder Selectionsort) zur Hilfe genommen. Die weiteren Sortieralgorithmen werden für das Sortieren kleinerer Teilarrays genutzt, da z.B. der Insertionsort bei kleinen Arrays effizienter ist als der Mergesort.
 Das bedeutet, dass die Aufteilung des Arrays, wie sie beim Mergesort vorgesehen ist, nur bis zu einem gewissen Grad durchgeführt wird und dann die restliche Sortierung der Arrayfragmente durch einen für kleine Arrays effizienteren Algorithmus durchgeführt wird.
+
+
 >Der Top-Down-Mergesort Algorithmus hat ein Laufzeit verhalten zwischen 1/2 N log(N) und N log(N). 
 
 
 ---
 ### Bottom-Up-Mergesort
->Der Bottom-Up-Mergesort verzichtet auf Rekursion. Der Algorithmus iteriert über den Array wobei er beim ersten Durchlauf je zwei aufeinander folgende Elemente sortiert. Die entstehenden Gruppen werden dann beim nächsten Durchlauf wieder mit je zu zweit Gruppe in eine neue Gruppe gemerget. Dieser Prozess läuft so lange bis der Array sortiert ist. Die Anzahl der benötigten Vergleiche ist gleich wie bei der rekursiven Variante, jedoch kann es beim Bottom-Up-Mergesort, passieren, dass ein Element lange Zeit als eigene Gruppe betrachtet wird und erst bei der vorletzten Iteration mit einer sehr großen Gruppe gemergt. 
+
+
+Der Bottom-Up-Mergesort verzichtet auf Rekursion. Der Algorithmus iteriert über den Array wobei er beim ersten Durchlauf je zwei aufeinander folgende Elemente sortiert. Die entstehenden Gruppen werden dann beim nächsten Durchlauf wieder mit je zu zweit Gruppe in eine neue Gruppe gemerget. Dieser Prozess läuft so lange bis der Array sortiert ist. Die Anzahl der benötigten Vergleiche ist gleich wie bei der rekursiven Variante, jedoch kann es beim Bottom-Up-Mergesort, passieren, dass ein Element lange Zeit als eigene Gruppe betrachtet wird und erst bei der vorletzten Iteration mit einer sehr großen Gruppe gemergt. 
+
+
 ---
 ---
 ## Bäume
 
 ---
 ### Binärer Suchbaum
-> Beim binären Suchbaum hat jeder Knoten maximal 2 Kindknoten, wobei das linke immer den kleineren Wert hat und der rechte immer den größeren Wert. Alle Knoten links eines Knotens sind kleiner als der Ausgangsknoten und alle Knoten rechts sind größer. Dadurch ist die maximale Zahl der Vergleiche bei der Suche in einem binären Suchbaum gleich dessen Höhe ist. Auf jeden Knoten referenziert genau ein Elternknoten, außer beim Wurzelknoten auf den kein anderer Knoten referenziert.
+
+
+Beim binären Suchbaum hat jeder Knoten maximal 2 Kindknoten, wobei das linke immer den kleineren Wert hat und der rechte immer den größeren Wert. Alle Knoten links eines Knotens sind kleiner als der Ausgangsknoten und alle Knoten rechts sind größer. Dadurch ist die maximale Zahl der Vergleiche bei der Suche in einem binären Suchbaum gleich dessen Höhe ist. Auf jeden Knoten referenziert genau ein Elternknoten, außer beim Wurzelknoten auf den kein anderer Knoten referenziert.
+
+
 ---
 ### AVL-Bäume
+
+
+Der AVL-Baum ist besonders gut geeignet, wenn häufig schnell auf Daten zugegriffen werden muss.
+Der AVL-Baum ist ein binärer Suchbaum, bei dem per Rotation beim Einfügen dafür gesorgt wird, dass er balanciert bleibt und dadurch maximal log N Schlüssel verglichen werden müssen, um ein Objekt zu finden. 
+Damit der Baum balanciert bleibt wird bei dem Einfügen mithilfe des Balance-Faktors rotiert, wodurch die balancierte Struktur des binären Suchbaums erhalten bleibt.
+Der Balance-Faktor kann für jeden Knoten des Baumes berechnet werden. Dabei wird die Höhe des linken Teilbaums des Knotens von der Höhe des rechten Teilbaums abgezogen.
+
+
+> BF(t) := Height(tr) - Height(tl)
+
+Ein binärer Suchbaum ist dann ein AVL-Baum, wenn der Balance-Faktor jedes Knotens kleiner gleich 1 und größer gleich -1 ist.
+
+> -1 <= BF(t) <= 1
 
 
 ---
@@ -128,6 +147,8 @@ Das bedeutet, dass die Aufteilung des Arrays, wie sie beim Mergesort vorgesehen 
 
 
 ## Hashing
+
+
 ---
 ---
 ## Teilstringsuche nach Boyer-Moore
