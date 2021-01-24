@@ -151,6 +151,8 @@ Ist der Balance-Faktor eines Knoten negativ so ist der linke Teilbaum höher als
 Um aus eine binären Suchbaum einen AVL-Baum zu machen, wird die Rotation bei allen Knoten mit | BF(t) | >= 2 eingesetzt bis alle Knoten einen Balance-Faktor zwischen 1 und -1 haben.
 
 Beim Einfügen wird zuerst wie im binären Suchbaum der Knoten eingefügt, danach wird der Baum ggf. wieder zu einem AVL-Baum umgewandelt.
+
+
 ---
 ---
 
