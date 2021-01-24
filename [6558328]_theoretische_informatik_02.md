@@ -4,13 +4,12 @@
 
 
 Beim Merge Sort werden zwei Teilarrays durch sortiertes Mischen zusammengeführt. Der Algorithmus teilt dabei den Array solange auf bis nur noch pro Teilarray maximal 1 Element übrig ist. Diese Teilarrays werden zusammengeführt indem immer die ersten beiden Elemente zweier Teilarrays verglichen werden. Ist ein Wert kleiner  so wird er in den Ausgabearray geschrieben und man betrachtet im nächsten Vergleich das darauf folgende Element. Dies wird so lange durchgeführt bis man das Ende beider Teilarrays erreicht ist. Die gegebenen Teilarrays müssen bereits geordnet sein, weshalb die zuvor angesprochene Teilung bis zu Arrays mit maximal einem Element notwendig ist, da Listen mit einem Element automatisch sortiert sind.
-Der Merge Sort Algorithmus basiert auf dem *Teile-und-Herrsche-Paradigma* (vgl. Sedgewick et al, 2014).
+> Der Merge Sort Algorithmus basiert auf dem *Teile-und-Herrsche-Paradigma* (vgl. Sedgewick et al, 2014).
 
 
 Charakteristika(N = Größe des Arrays):
-
-	- Laufzeitverhalten: N log(N)
-	- zusätzlich benötigter Speicherplatz: N
+* Laufzeitverhalten: N log(N)
+* zusätzlich benötigter Speicherplatz: N
 
 
 Einfaches Sortieren mit Mergesort
@@ -122,7 +121,9 @@ Der Bottom-Up-Mergesort verzichtet auf Rekursion. Der Algorithmus iteriert über
 ### Binärer Suchbaum
 
 
-Beim binären Suchbaum hat jeder Knoten maximal 2 Kindknoten, wobei das linke immer den kleineren Wert hat und der rechte immer den größeren Wert. Alle Knoten links eines Knotens sind kleiner als der Ausgangsknoten und alle Knoten rechts sind größer. Dadurch ist die maximale Zahl der Vergleiche bei der Suche in einem binären Suchbaum gleich dessen Höhe ist. Auf jeden Knoten referenziert genau ein Elternknoten, außer beim Wurzelknoten auf den kein anderer Knoten referenziert.
+Beim binären Suchbaum hat jeder Knoten maximal 2 Kindknoten, wobei das linke immer den kleineren Wert hat und der rechte immer den größeren Wert. Alle Knoten links eines Knotens sind kleiner als der Ausgangsknoten und alle Knoten rechts sind größer. Dadurch ist die maximale Zahl der Vergleiche bei der Suche in einem binären Suchbaum gleich dessen Höhe ist. Auf jeden Knoten referenziert genau ein Elternknoten, außer beim Wurzelknoten auf den kein anderer Knoten referenziert. 
+
+Beim Einfügen eines Knoten wird dieser in der Regel als Blatt des Baumes eingefügt.
 |   |   |   |   |   |
 |---|---|---|---|---|
 |   |   | 8 |   |   |
@@ -145,7 +146,11 @@ Ein binärer Suchbaum ist dann ein AVL-Baum, wenn der Balance-Faktor jedes Knote
 
 > -1 <= BF(t) <= 1
 
+Ist der Balance-Faktor eines Knoten negativ so ist der linke Teilbaum höher als der rechte.
 
+Um aus eine binären Suchbaum einen AVL-Baum zu machen, wird die Rotation bei allen Knoten mit | BF(t) | >= 2 eingesetzt bis alle Knoten einen Balance-Faktor zwischen 1 und -1 haben.
+
+Beim Einfügen wird zuerst wie im binären Suchbaum der Knoten eingefügt, danach wird der Baum ggf. wieder zu einem AVL-Baum umgewandelt.
 ---
 ---
 
@@ -160,3 +165,7 @@ Ein binärer Suchbaum ist dann ein AVL-Baum, wenn der Balance-Faktor jedes Knote
 
 ---
 ---
+
+
+## Quellen
+
