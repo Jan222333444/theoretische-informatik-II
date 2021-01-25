@@ -123,14 +123,15 @@ Der Bottom-Up-Mergesort verzichtet auf Rekursion. Der Algorithmus iteriert über
 
 Beim binären Suchbaum hat jeder Knoten maximal 2 Kindknoten, wobei das linke immer den kleineren Wert hat und der rechte immer den größeren Wert. Alle Knoten links eines Knotens sind kleiner als der Ausgangsknoten und alle Knoten rechts sind größer. Dadurch ist die maximale Zahl der Vergleiche bei der Suche in einem binären Suchbaum gleich dessen Höhe ist. Auf jeden Knoten referenziert genau ein Elternknoten, außer beim Wurzelknoten auf den kein anderer Knoten referenziert. 
 
+![Binärer-Suchbaum-Vollständig](/Binärer_Suchbaum.png)
+
 Beim Einfügen eines Knoten wird dieser in der Regel als Blatt des Baumes eingefügt.
-|   |   |   |   |   |
-|---|---|---|---|---|
-|   |   | 8 |   |   |
-|   | 3 |   |12 |   |
+
+Das Löschen eines Knoten 
 
 
 ---
+
 ### AVL-Bäume
 
 
@@ -160,8 +161,13 @@ Beim Einfügen wird zuerst wie im binären Suchbaum der Knoten eingefügt, danac
 ## Hashing
 
 
+### Hashfunktionen
+
+Hashfunktionen bilden mit Eingaben einen Hashwert der, je nach angewendeter Funktion, nahezu eindeutig ist. 
+
 ---
 ---
+
 ## Teilstringsuche nach Boyer-Moore
 
 
