@@ -123,7 +123,7 @@ Der Bottom-Up-Mergesort verzichtet auf Rekursion. Der Algorithmus iteriert über
 
 Beim binären Suchbaum hat jeder Knoten maximal 2 Kindknoten, wobei das linke immer den kleineren Wert hat und der rechte immer den größeren Wert. Alle Knoten links eines Knotens sind kleiner als der Ausgangsknoten und alle Knoten rechts sind größer. Dadurch ist die maximale Zahl der Vergleiche bei der Suche in einem binären Suchbaum gleich dessen Höhe ist. Auf jeden Knoten referenziert genau ein Elternknoten, außer beim Wurzelknoten auf den kein anderer Knoten referenziert. 
 
-![Binärer-Suchbaum-Vollständig](/Binärer_Suchbaum.png)
+![Binärer-Suchbaum-Vollständig](/Binärer_Suchbaum.png "Binärer Suchbaum")
 
 Beim Einfügen eines Knoten wird dieser in der Regel als Blatt des Baumes eingefügt.
 
@@ -149,7 +149,7 @@ Ein binärer Suchbaum ist dann ein AVL-Baum, wenn der Balance-Faktor jedes Knote
 
 Ist der Balance-Faktor eines Knoten negativ so ist der linke Teilbaum höher als der rechte.
 
-![AVL-Baum-Vollständig](/AVL-Baum.png)
+![AVL-Baum-Vollständig](/AVL-Baum.png "AVL-Baum")
 
 Um aus eine binären Suchbaum einen AVL-Baum zu machen, wird die Rotation bei allen Knoten mit | BF(t) | >= 2 eingesetzt bis alle Knoten einen Balance-Faktor zwischen 1 und -1 haben.
 
