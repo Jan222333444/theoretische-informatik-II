@@ -139,7 +139,7 @@ Das Löschen eines Knoten muss in mehrere Fälle unterschieden werden. Ist der z
 Der AVL-Baum ist besonders gut geeignet, wenn häufig schnell auf Daten zugegriffen werden muss.
 Der AVL-Baum ist ein binärer Suchbaum, bei dem per Rotation beim Einfügen dafür gesorgt wird, dass er balanciert bleibt und dadurch maximal log N Schlüssel verglichen werden müssen, um ein Objekt zu finden. 
 Damit der Baum balanciert bleibt wird bei dem Einfügen mithilfe des Balance-Faktors rotiert, wodurch die balancierte Struktur des binären Suchbaums erhalten bleibt.
-Der Balance-Faktor kann für jeden Knoten des Baumes berechnet werden. Dabei wird die Höhe des linken Teilbaums des Knotens von der Höhe des rechten Teilbaums abgezogen.
+Der Balance-Faktor kann für jeden Knoten des Baumes berechnet werden. Dabei wird die Höhe des linken Teilbaums des Knotens von der Höhe des rechten Teilbaums subtrahiert.
 
 
 > BF(t) := Height(tr) - Height(tl)
@@ -173,10 +173,7 @@ Hashfunktionen bilden mit Eingaben einen Hashwert der, je nach angewendeter Funk
 
 ## Teilstringsuche nach Boyer-Moore
 
-Bei der Teilstringsuche nach Boyer-Moore
-
-### Vorkommensheuristik
-
+Beim Boyer-Moore Algorithmus wird das Muster unter dem Text angelegt und es wird immer nur das letzte Zeichen des Musters mit dem darüber liegenden Zeichen des Textes verglichen. Sind die beiden Zeichen nicht gleich so wird im Muster nach dem gleichen Zeichen wie im Text gesucht. Ist ein Zeichen gleich so wird das Muster bis zu dem Textzeichen weiter nach rechts geschoben. Ist es nicht gleich so wird das gesamte Muster bis nach dem verglichenen Textzeichen nach rechts gerückt. Dieses Vorgehen wird so lange wiederholt bis entweder das Muster gefunden wurde oder bis man den gesamten Text durchsucht hat. Ist das letzte Zeichen des Musters gleich dem zu vergleichenden Textzeichen so wird das restliche Muster von rechts nach links mit dem Text verglichen.
 
 
 ---
