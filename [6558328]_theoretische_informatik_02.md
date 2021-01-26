@@ -24,6 +24,7 @@ Einfaches Sortieren mit Mergesort
 |1 2 6 8 || 3 4 5 7 9 |
 ||1 2 3 4 5 6 7 8 9 |
 
+![Sortieren Grafisch](/Mergesort.jpg "Graphische Darstellung")
 
 Einfacher Mergesort in Java
 
@@ -125,9 +126,9 @@ Beim binären Suchbaum hat jeder Knoten maximal 2 Kindknoten, wobei das linke im
 
 ![Binärer-Suchbaum-Vollständig](/Binärer_Suchbaum.png "Binärer Suchbaum")
 
-Beim Einfügen eines Knoten wird dieser in der Regel als Blatt des Baumes eingefügt.
+Beim Einfügen eines Knoten wird dieser in der Regel als ein Blatt des Baumes eingefügt.
 
-Das Löschen eines Knoten 
+Das Löschen eines Knoten muss in mehrere Fälle unterschieden werden. Ist der zu entfernente Knoten ein Blatt des Baumes so muss lediglich dessen Referenz gelöscht werden. Hat der zu löschende Knoten genau ein Kindknoten so wird dieser als Referenz an den Elternknoten des zu löschenden Knotens gegeben. 
 
 
 ---
@@ -172,10 +173,11 @@ Hashfunktionen bilden mit Eingaben einen Hashwert der, je nach angewendeter Funk
 
 ## Teilstringsuche nach Boyer-Moore
 
+Bei der Teilstringsuche nach Boyer-Moore
+
+### Vorkommensheuristik
+
+
 
 ---
 ---
-
-
-## Quellen
-
