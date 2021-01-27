@@ -154,16 +154,32 @@ Ist der Balance-Faktor eines Knoten negativ so ist der linke Teilbaum höher als
 
 Um aus eine binären Suchbaum einen AVL-Baum zu machen, wird die Rotation bei allen Knoten mit | BF(t) | >= 2 eingesetzt bis alle Knoten einen Balance-Faktor zwischen 1 und -1 haben.
 
-Beim Einfügen wird zuerst wie im binären Suchbaum der Knoten eingefügt, danach wird der Baum ggf. wieder zu einem AVL-Baum umgewandelt. Dabei wird der Balance-Faktor für alle betroffene Knoten berechnet. Wurde in einem linken Teilbaum ein linker Kindknoten angelegt wird die einfache Rechtsrotation durchgeführt, wird in einem rechten Teilbaum ein rechtes Kind eingefügt wird die einfache Linksrotation durchgeführt. Wird in einem linken Teilbaum ein rechter Kindknoten 
+Beim Einfügen wird zuerst wie im binären Suchbaum der Knoten eingefügt, danach wird der Baum ggf. wieder zu einem AVL-Baum umgewandelt. Dabei wird der Balance-Faktor für alle betroffene Knoten berechnet. Wurde in einem linken Teilbaum ein linker Kindknoten angelegt wird die einfache Rechtsrotation durchgeführt, wird in einem rechten Teilbaum ein rechtes Kind eingefügt wird die einfache Linksrotation durchgeführt.
 
 Übersicht AVL-Baum Rotationen
 
-| Rotation                     | Balance-Faktor oberer Knoten(Teilbaum) | Balance-Faktor unterer Knoten (Elternknoten) |
-| ---------------------------- | -------------------------------------- | -------------------------------------------- |
-| Rechts-Rotation              |                  -2                    |                     -1                       |
-| Links-Rotation               |                   2                    |                      1                       |
-| Links-Rechts-Rotation        |                  -2                    |                      1                       |
-| Rechts-Links-Rotation        |                   2                    |                     -1                       |
+| Rotation                     |      Balance-Faktor oberer Knoten       |         Balance-Faktor unterer Knoten        |
+| ---------------------------- | --------------------------------------- | -------------------------------------------- |
+| Rechts-Rotation              |                   -2                    |                     -1                       |
+| Links-Rotation               |                    2                    |                      1                       |
+| Links-Rechts-Rotation        |                   -2                    |                      1                       |
+| Rechts-Links-Rotation        |                    2                    |                     -1                       |
+
+#### **Rechts-Rotation**
+
+Wird ein Knoten in einem linken Teilbaum als linker Kindknoten eingefügt und ein Knoten des Teilbaums verletzt dadurch das Balance-Kriterium muss eine einfache Rechts-Rotation durchgeführt werden. Dabei wird der das Balance-Kriterium verletzende Knoten zum rechten Kindknoten des eigenen linken Kindknotens. Die neue Wurzel des Teilbaums hat nun rechts den zuvorigen Elternknoten und links den zuvorigen linken Kindknoten. Der ehemalige Elternknoten hat jetzt links den vorigen rechten Kindknoten der Wurzel des Teilbaums. Abschließend wird die Refernz auf die neue Wurzel des Teilbaums zum nächsthöheren Knoten weitergegeben und gespeichert.
+
+#### **Links-Rotation**
+
+Die Links-Rotation ist die Invertierung der Rechts-Rotation.
+
+
+#### **Links-Rechts-Rotation**
+
+
+
+#### **Rechts-Links-Rotation**
+
 
 
 ---
@@ -193,6 +209,10 @@ Beim Boyer-Moore Algorithmus wird das Muster unter dem Text angelegt und es wird
 
 ## Quellen
 
+https://cg.informatik.uni-freiburg.de/course_notes/info2_13_avlBaum.pdf
+
 https://www1.pub.informatik.uni-wuerzburg.de/databases/Binaere_Suchbaeume/avl_trees/rebalancing/rotations.html
 
 Robert Sedgewick / Kevin Wayne | Algorithmen und Datenstrukturen
+
+https://visualgo.net/de/bst
