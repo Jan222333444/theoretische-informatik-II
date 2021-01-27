@@ -126,7 +126,7 @@ Beim binären Suchbaum hat jeder Knoten maximal 2 Kindknoten, wobei das linke im
 
 ![Binärer-Suchbaum-Vollständig](/Binärer_Suchbaum.png "Binärer Suchbaum")
 
-Beim Einfügen eines Knoten wird dieser in der Regel als ein Blatt des Baumes eingefügt.
+Beim Einfügen eines Knoten wird dieser in der Regel als ein Blatt des Baumes eingefügt, da beim binären Suchbaum in der Regel die Struktur beim Einfügen nicht optimiert wird.
 
 Das Löschen eines Knoten muss in mehrere Fälle unterschieden werden. Ist der zu entfernente Knoten ein Blatt des Baumes so muss lediglich dessen Referenz gelöscht werden. Hat der zu löschende Knoten genau ein Kindknoten so wird dieser als Referenz an den Elternknoten des zu löschenden Knotens gegeben. 
 
