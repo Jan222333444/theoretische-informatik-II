@@ -176,5 +176,7 @@ Hashfunktionen bilden mit Eingaben einen Hashwert der, je nach angewendeter Funk
 Beim Boyer-Moore Algorithmus wird das Muster unter dem Text angelegt und es wird immer nur das letzte Zeichen des Musters mit dem darüber liegenden Zeichen des Textes verglichen. Sind die beiden Zeichen nicht gleich so wird im Muster nach dem gleichen Zeichen wie im Text gesucht. Ist ein Zeichen gleich so wird das Muster bis zu dem Textzeichen weiter nach rechts geschoben. Ist es nicht gleich so wird das gesamte Muster bis nach dem verglichenen Textzeichen nach rechts gerückt. Dieses Vorgehen wird so lange wiederholt bis entweder das Muster gefunden wurde oder bis man den gesamten Text durchsucht hat. Ist das letzte Zeichen des Musters gleich dem zu vergleichenden Textzeichen so wird das restliche Muster von rechts nach links mit dem Text verglichen.
 
 
+![Boyer-Moore](/Boyer-Moore-Tabelle.png "Boyer-Moore Graphisch")
+
 ---
 ---
