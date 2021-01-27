@@ -154,7 +154,16 @@ Ist der Balance-Faktor eines Knoten negativ so ist der linke Teilbaum höher als
 
 Um aus eine binären Suchbaum einen AVL-Baum zu machen, wird die Rotation bei allen Knoten mit | BF(t) | >= 2 eingesetzt bis alle Knoten einen Balance-Faktor zwischen 1 und -1 haben.
 
-Beim Einfügen wird zuerst wie im binären Suchbaum der Knoten eingefügt, danach wird der Baum ggf. wieder zu einem AVL-Baum umgewandelt. Dabei wird der Balance-Faktor für alle betroffene Knoten berechnet. Wenn ein Knoten die Balance-Bedingung verletzt, wird eine Rotation durchgeführt. Ist der Balance-Faktor kleiner -1 so wird eine sog. Rechtsrotation durchgeführt. Ist der Balance-Faktor größer 1 wird eine Linksrotation durchgeführt.
+Beim Einfügen wird zuerst wie im binären Suchbaum der Knoten eingefügt, danach wird der Baum ggf. wieder zu einem AVL-Baum umgewandelt. Dabei wird der Balance-Faktor für alle betroffene Knoten berechnet. Wurde in einem linken Teilbaum ein linker Kindknoten angelegt wird die einfache Rechtsrotation durchgeführt, wird in einem rechten Teilbaum ein rechtes Kind eingefügt wird die einfache Linksrotation durchgeführt. Wird in einem linken Teilbaum ein rechter Kindknoten 
+
+Übersicht AVL-Baum Rotationen
+
+| Rotation                     | Balance-Faktor oberer Knoten(Teilbaum) | Balance-Faktor unterer Knoten (Elternknoten) |
+| ---------------------------- | -------------------------------------- | -------------------------------------------- |
+| Rechts-Rotation              |                  -2                    |                     -1                       |
+| Links-Rotation               |                   2                    |                      1                       |
+| Links-Rechts-Rotation        |                  -2                    |                      1                       |
+| Rechts-Links-Rotation        |                   2                    |                     -1                       |
 
 
 ---
@@ -180,3 +189,10 @@ Beim Boyer-Moore Algorithmus wird das Muster unter dem Text angelegt und es wird
 
 ---
 ---
+
+
+## Quellen
+
+https://www1.pub.informatik.uni-wuerzburg.de/databases/Binaere_Suchbaeume/avl_trees/rebalancing/rotations.html
+
+Robert Sedgewick / Kevin Wayne | Algorithmen und Datenstrukturen
