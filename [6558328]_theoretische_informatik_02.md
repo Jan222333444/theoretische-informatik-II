@@ -169,16 +169,25 @@ Beim Einfügen wird zuerst wie im binären Suchbaum der Knoten eingefügt, danac
 
 Wird ein Knoten in einem linken Teilbaum als linker Kindknoten eingefügt und ein Knoten des Teilbaums verletzt dadurch das Balance-Kriterium muss eine einfache Rechts-Rotation durchgeführt werden. Dabei wird der das Balance-Kriterium verletzende Knoten zum rechten Kindknoten des eigenen linken Kindknotens. Die neue Wurzel des Teilbaums hat nun rechts den zuvorigen Elternknoten und links den zuvorigen linken Kindknoten. Der ehemalige Elternknoten hat jetzt links den vorigen rechten Kindknoten der Wurzel des Teilbaums. Abschließend wird die Refernz auf die neue Wurzel des Teilbaums zum nächsthöheren Knoten weitergegeben und gespeichert.
 
+![Rechts-Rotation](/Rechts-Rotation.png "Rechts-Rotation exemplarisch")
+
+
+
 #### **Einfügen mit Links-Rotation**
 
 Die Links-Rotation ist die Invertierung der Rechts-Rotation. Die Links-Rotation kann genutzt werden, wenn bei einem rechten Teilbaum ein rechter Kindknoten eingefügt wird und ein Knoten gegen das Balance-Kriterium verstößt. 
+
+![Links-Rotation](/Links-Rotation.png "Links-Rotation exemplarisch")
+
 
 
 #### **Einfügen mit Links-Rechts-Rotation**
 
 Bei einer Rechts-Links-Rotation wird zuerst eine Rechts-Rotation durchgeführt welche von einer Links-Rotation gefolgt ist. Diese wird vor allem benötigt wenn in den linken Teilbaum ein rechter Kindknoten eingefügt wird, der dafür sorgt, dass einer höherer Knoten das Balance-Kriterium verletzt. 
 
-![Links-Rechts-Rotation](/Links-Rechts-Rotation.png "Links-Rechtsrotation exemplarisch")
+![Links-Rechts-Rotation](/Links-Rechts-Rotation.png "Links-Rechts-Rotation exemplarisch")
+
+
 
 #### **Einfügen mit Rechts-Links-Rotation**
 
@@ -219,3 +228,5 @@ https://www1.pub.informatik.uni-wuerzburg.de/databases/Binaere_Suchbaeume/avl_tr
 Robert Sedgewick / Kevin Wayne | Algorithmen und Datenstrukturen
 
 https://visualgo.net/de/bst
+
+https://moodle.mosbach.dhbw.de/pluginfile.php/421473/mod_resource/content/1/theoretische_informatik_II_2020.pdf
