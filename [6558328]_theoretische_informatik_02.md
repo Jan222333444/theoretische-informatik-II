@@ -165,21 +165,24 @@ Beim Einfügen wird zuerst wie im binären Suchbaum der Knoten eingefügt, danac
 | Links-Rechts-Rotation        |                   -2                    |                      1                       |
 | Rechts-Links-Rotation        |                    2                    |                     -1                       |
 
-#### **Rechts-Rotation**
+#### **Einfügen mit Rechts-Rotation**
 
 Wird ein Knoten in einem linken Teilbaum als linker Kindknoten eingefügt und ein Knoten des Teilbaums verletzt dadurch das Balance-Kriterium muss eine einfache Rechts-Rotation durchgeführt werden. Dabei wird der das Balance-Kriterium verletzende Knoten zum rechten Kindknoten des eigenen linken Kindknotens. Die neue Wurzel des Teilbaums hat nun rechts den zuvorigen Elternknoten und links den zuvorigen linken Kindknoten. Der ehemalige Elternknoten hat jetzt links den vorigen rechten Kindknoten der Wurzel des Teilbaums. Abschließend wird die Refernz auf die neue Wurzel des Teilbaums zum nächsthöheren Knoten weitergegeben und gespeichert.
 
-#### **Links-Rotation**
+#### **Einfügen mit Links-Rotation**
 
-Die Links-Rotation ist die Invertierung der Rechts-Rotation.
-
-
-#### **Links-Rechts-Rotation**
+Die Links-Rotation ist die Invertierung der Rechts-Rotation. Die Links-Rotation kann genutzt werden, wenn bei einem rechten Teilbaum ein rechter Kindknoten eingefügt wird und ein Knoten gegen das Balance-Kriterium verstößt. 
 
 
+#### **Einfügen mit Links-Rechts-Rotation**
 
-#### **Rechts-Links-Rotation**
+Bei einer Rechts-Links-Rotation wird zuerst eine Rechts-Rotation durchgeführt welche von einer Links-Rotation gefolgt ist. Diese wird vor allem benötigt wenn in den linken Teilbaum ein rechter Kindknoten eingefügt wird, der dafür sorgt, dass einer höherer Knoten das Balance-Kriterium verletzt. 
 
+![Links-Rechts-Rotation](/Links-Rechts-Rotation.png "Links-Rechtsrotation exemplarisch")
+
+#### **Einfügen mit Rechts-Links-Rotation**
+
+Die Rechts-Links-Rotation ist die Invertierung der der Links-Rechts-Rotation. Sie wird angewandt wenn ein in einen rechten Teilbaum ein linker Kindknoten eingefügt wird und dadurch ein Knoten das Balance-Kriterium verletzt.
 
 
 ---
