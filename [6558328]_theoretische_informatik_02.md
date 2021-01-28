@@ -193,6 +193,7 @@ Bei einer Rechts-Links-Rotation wird zuerst eine Rechts-Rotation durchgeführt w
 
 Die Rechts-Links-Rotation ist die Invertierung der der Links-Rechts-Rotation. Sie wird angewandt wenn ein in einen rechten Teilbaum ein linker Kindknoten eingefügt wird und dadurch ein Knoten das Balance-Kriterium verletzt.
 
+![Rechts-Links-Rotation](/Rechts-Links-Rotation.png "Rechts-Links-Rotation exemplarisch")
 
 ---
 ---
