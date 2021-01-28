@@ -204,7 +204,26 @@ Die Rechts-Links-Rotation ist die Invertierung der der Links-Rechts-Rotation. Si
 
 ### Hashfunktionen
 
-Hashfunktionen bilden mit Eingaben einen Hashwert der, je nach angewendeter Funktion, nahezu eindeutig ist. 
+Hashfunktionen bilden mit Eingaben einen Hashwert der, je nach angewendeter Funktion, nahezu eindeutig ist.
+
+### Hashtabelle
+
+Für jeden Wert wird, über eine Hashfunktion, ein Index in der Tabelle berechnet an dem dieser abgelegt werden soll. Je nach gewählter Funktion kann es zu sog. Kollisionen kommen bei denen zwei Eingabewerte den gleichen Hashwert haben. Tritt eine solche Kollision ein wird eine Ausweichstrategie, wie zum Beispiel Verkettung oder lineare Sondierung, angewendet.
+
+### Verkettung
+
+Bei der Strategie Verkettung wird bei Kollision an der Stelle des berechneten Index eine einfach verkettete Liste eingefügt, wobei das vorderste Element immer das zuletzt hinzugefügte Element ist.
+
+
+h(K) = K mod 11
+Gegeben: 1234, 4321, 256, 2222, 16, 1111, 954, 7532, 368, 600, 86
+
+| Index | 0  | 1 |   2  |  3  | 4 |  5  |  6  | 7 |   8  |   9   | 10 |
+| ----- |----|---|------|-----|---|-----|-----|---|------|-------|----|
+|       |1111|   | 1234 | 256 |   | 368 | 600 |   | 7532 |   86  |    |
+|       |2222|   |      |     |   |  16 |     |   |  954 |  4321 |    |
+
+### Lineare Sondierung
 
 ---
 ---
@@ -231,3 +250,5 @@ Robert Sedgewick / Kevin Wayne | Algorithmen und Datenstrukturen
 https://visualgo.net/de/bst
 
 https://moodle.mosbach.dhbw.de/pluginfile.php/421473/mod_resource/content/1/theoretische_informatik_II_2020.pdf
+
+http://ac.informatik.uni-freiburg.de/lak_teaching/ss_06/info2/Slides/12_Hashverfahren_Verkettung_der_Ueberlaeufer.pdf
