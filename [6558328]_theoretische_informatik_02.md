@@ -126,9 +126,12 @@ Beim binären Suchbaum hat jeder Knoten maximal 2 Kindknoten, wobei das linke im
 
 ![Binärer-Suchbaum-Vollständig](/Binärer_Suchbaum.png "Binärer Suchbaum")
 
-Beim Einfügen eines Knoten wird dieser in der Regel als ein Blatt des Baumes eingefügt, da beim binären Suchbaum in der Regel die Struktur beim Einfügen nicht optimiert wird.
+Beim Einfügen eines Knoten wird dieser in der Regel als ein Blatt des Baumes eingefügt, da beim binären Suchbaum in der Regel die Struktur beim Einfügen nicht optimiert wird. Dabei wird der einzufügende Knoten mit der Wurzel verglichen. Ist der Schlüssel des neuen Knoten größer als der des Knotens so wird er an den rechten Kindknoten weitergegeben. Dieser Vorgang wird solange wiederholt bis er nicht mehr weitergegeben werden kann, also keine weiterer Knoten da ist. Dann wird er als Kindknoten des letzten Vergleichsknoten eingefügt.
 
-Das Löschen eines Knoten muss in mehrere Fälle unterschieden werden. Ist der zu entfernente Knoten ein Blatt des Baumes so muss lediglich dessen Referenz gelöscht werden. Hat der zu löschende Knoten genau ein Kindknoten so wird dieser als Referenz an den Elternknoten des zu löschenden Knotens gegeben. 
+Einfügen des Elements 10:
+![Einfügen-Binärbaum](/einfügen-binärbaum.png "Einfügen eines Elements in einen binären Suchbaum")
+
+Das Löschen eines Knoten muss in mehrere Fälle unterschieden werden. Ist der zu entfernente Knoten ein Blatt des Baumes so muss lediglich dessen Referenz gelöscht werden. Hat der zu löschende Knoten genau ein Kindknoten so wird dieser als Referenz an den Elternknoten des zu löschenden Knotens gegeben. Hat der zu entfernende Knoten zwei Kindknoten/Teilbäume nimmt immer der Knoten den Platz des zu entfernenden Knotens ein der der kleinste des rechten Teilbaums ist.
 
 
 ---
@@ -223,7 +226,10 @@ Gegeben: 1234, 4321, 256, 2222, 16, 1111, 954, 7532, 368, 600, 86
 |       |1111|   | 1234 | 256 |   | 368 | 600 |   | 7532 |   86  |    |
 |       |2222|   |      |     |   |  16 |     |   |  954 |  4321 |    |
 
+
 ### Lineare Sondierung
+
+Bei der linearen Sondierung wird, im Gegensatz zur Verkettung, jedes Element an einer eigenen Stelle in Tabelle abgelegt. Kommt es zu Kollisionen wird die nächste freie Zelle genutzt. Das bedeutet das ein Element nicht immer unter dem Index auffindbar ist der von der Hashfunktion zugewiesen wird.
 
 ---
 ---
